@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[16]:
 
 
 import pandas as pd
@@ -33,9 +33,16 @@ df["FIPS code"] = df["FIPS code"].astype(str).str.zfill(5)
 
 df=df.rename(columns={"FIPS code" : "county_fips"})
 
+df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('SustainedHotspot', 'Sustained Hotspot')
+df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('Hotspot', 'Hotspot')
+df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('HighBurdenResolving', 'High Burden Resolving')
+df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('ModerateBurdenResolving', 'Moderate Burden Resolving')
+df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('EmergingHotspot', 'Emerging Hotspot')
+df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('ModerateBurden', 'Moderate Burden')
+df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('LowBurden', 'Low Burden')
+
 #save the file to be uploaded to github
 df.to_csv("latest-cdc-covid-data-by-county.csv", index=False)
-
 
 
 # ## promote the GEOID property in our GeoJSON file
@@ -75,10 +82,40 @@ df.to_csv("latest-cdc-covid-data-by-county.csv", index=False)
 #     json.dump(data, f)
 
 
-# In[ ]:
+# In[17]:
 
 
+# df.head()
 
+
+# In[4]:
+
+
+# 'SustainedHotspot' : 'Sustained Hotspot' 
+# Hotspot : Hotspot
+# HighBurdenResolving : HighBurdenResolving
+# ModerateBurdenResolving : ModerateBurdenResolving
+# EmergingHotspot : EmergingHotspot
+# ModerateBurden : ModerateBurden
+# lowburden : lowburden
+
+
+# In[13]:
+
+
+# df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('SustainedHotspot', 'Sustained Hotspot')
+# df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('Hotspot', 'Hotspot')
+# df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('HighBurdenResolving', 'High Burden Resolving')
+# df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('ModerateBurdenResolving', 'Moderate Burden Resolving')
+# df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('EmergingHotspot', 'Emerging Hotspot')
+# df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('ModerateBurden', 'Moderate Burden')
+# df['Area of Concern Category'] = df['Area of Concern Category'].str.replace('Lowburden', 'Low Burden')
+
+
+# In[14]:
+
+
+# df['Area of Concern Category'].value_counts()
 
 
 # In[ ]:
