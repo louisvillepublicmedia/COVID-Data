@@ -1,4 +1,7 @@
 date,state_name,state_postal,doses_distributed,doses_distributed_per_100k,doses_administered,doses_administered_per_100k,first_dose_administered,percent_first_dose_administered,fully_vaccinated,percent_fully_vaccinated
+2021-02-16,Ohio,OH,2350375.0,20107.0,1794982.0,15356.0,1308980.0,11.2,482839.0,4.1
+2021-02-16,Kentucky,KY,903775.0,20229.0,711588.0,15927.0,510373.0,11.4,198180.0,4.4
+2021-02-16,West Virginia,WV,429800.0,23982.0,393643.0,21965.0,250814.0,14,142817.0,8
 2021-02-15,Ohio,OH,2315100.0,19806.0,1759362.0,15051.0,1284822.0,11,471446.0,4
 2021-02-15,Kentucky,KY,892100.0,19968.0,698961.0,15645.0,502207.0,11.2,193777.0,4.3
 2021-02-15,West Virginia,WV,399600.0,22297.0,388508.0,21678.0,249336.0,13.9,139160.0,7.8
