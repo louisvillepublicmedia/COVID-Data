@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[10]:
+# In[27]:
 
 
 import pandas as pd
@@ -16,6 +16,8 @@ state_df = pd.read_excel(open(next(iglob('Community_Profile_Report*.xlsx')),'rb'
 # make first row as header
 state_df.columns = state_df.iloc[0]
 state_df = state_df[1:]
+state_df = state_df.rename(columns={"People with at least 1 dose as % of total population": "People initiating vaccination as % of total population", 
+                   "People who are fully vaccinated as % of total population": "People with full course administered as % of total population"})
 state_df.to_csv("cdcCovidDataByState.csv", index=False)
 
 df = pd.read_excel(open(next(iglob('Community_Profile_Report*.xlsx')),'rb'), sheet_name='Counties')
