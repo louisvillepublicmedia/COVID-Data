@@ -1,4 +1,7 @@
 date,state_abbreviation,state_name,state_population,doses_distributed_cumulative,doses_administered_cumulative,new_doses_distributed,new_doses_administered,new_doses_distributed_7_day_avg,new_doses_administered_7_day_avg,percent_doses_administered,percent_doses_administered_7_day_avg
+2021-06-04,KY,Kentucky,4467673,4327535,3680332,0,10224,7310.00,9191.00,85,126
+2021-06-04,OH,Ohio,11689100,12033675,9984951,0,31573,26697.14,25132.29,83,94
+2021-06-04,WV,West Virginia,1792147,1840765,1325601,0,4412,4354.29,2881.71,72,66
 2021-06-03,KY,Kentucky,4467673,4327535,3670108,6660,12946,7310.00,9552.57,85,131
 2021-06-03,OH,Ohio,11689100,12033675,9953378,58640,23338,26697.14,26023.14,83,97
 2021-06-03,WV,West Virginia,1792147,1840765,1321189,4520,1325,4354.29,2679.29,72,62
